@@ -1,0 +1,10 @@
+[gd_scene load_steps=2 format=3 uid="uid://bkgp740swpp7t"]
+
+[ext_resource type="Script" path="res://ship.gd" id="1_7w37a"]
+
+[node name="Ship" type="CharacterBody2D"]
+motion_mode = 1
+script = ExtResource("1_7w37a")
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
+polygon = PackedVector2Array(-84, -66, -87, 150, 86, 153, 83, -70, -3, -134)
