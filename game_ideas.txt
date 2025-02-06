@@ -1,0 +1,21 @@
+Objective:
+- Manage, upgrade and buy a new ship (early 19th century)
+- manage your crew between your ship and prizes
+Core Activities
+- buy, trade and/or loot goods
+- take prizes (and aristocratic prisoners) to sell for money
+- fight for or against various nations
+Core features
+- large map (traverse still focused on your ship)
+- learn where you are by spending time to observe the stars
+- changing weather / wind patters
+- real time combat (maneuver, range your guns, choose when to fire, boarding)
+- training your crew (loading time, manoeuvre reaction time)
+- manage supplies, ammo, gunpowder & food
+- crew injuries & medical
+- firefighting
+
+
+
+
+
