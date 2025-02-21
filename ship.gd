@@ -1,23 +1,23 @@
 extends CharacterBody2D
 
+# constants
+const ACCELERATION : float = 1. # in future based on wind, ship direction, sail orientation, sail deployment
 
-const SPEED = 300.0
+# variables
+var speed : float = 0
+var orders_speed : float = 0
+var orders_direction : float = 0
 
-# Get the gravity from the project settings to be synced with RigidBody nodes.
-var gravity = ProjectSettings.get_setting("physics/2d/default_gravity")
+func _process(delta):
+	orders_direction = Input.get_axis("ui_left", "ui_right")
+	orders_speed = Input.get_axis("ui_up", "ui_down")
 
 
 func _physics_process(delta):
-	# Add the gravity.
-	if not is_on_floor():
-		velocity.y += gravity * delta
-
 	# Get the input direction and handle the movement/deceleration.
 	# As good practice, you should replace UI actions with custom gameplay actions.
 	var direction = Input.get_axis("ui_left", "ui_right")
 	if direction:
-		velocity.x = direction * SPEED
-	else:
-		velocity.x = move_toward(velocity.x, 0, SPEED)
+		velocity.x = move_toward(velocity.x, direction * speed, ACCELERATION)
 
 	move_and_slide()
